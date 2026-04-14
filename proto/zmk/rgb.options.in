@@ -1,1 +1,1 @@
-zmk.rgb.LayerColors.keys max_count:80
+zmk.rgb.LayerColors.keys type:FT_CALLBACK
