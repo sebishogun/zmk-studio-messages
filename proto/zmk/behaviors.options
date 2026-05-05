@@ -1,0 +1,11 @@
+// nanopb encode/decode hints. Without these, string + repeated fields
+// turn into pb_callback_t which complicates the firmware C side.
+//
+// MacroSlot is a fixed shape: ≤16 bindings per slot (matches
+// CONFIG_ZMK_STUDIO_MACRO_SLOT_BINDINGS_MAX default), label up to 16
+// chars (room for "slot_<N>" + null + future tags).
+
+zmk.behaviors.MacroSlot.label max_size:16 fixed_length:false
+zmk.behaviors.MacroSlot.bindings max_count:16
+
+zmk.behaviors.SetMacroSlotRequest.bindings max_count:16
